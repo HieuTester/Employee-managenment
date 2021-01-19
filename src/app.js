@@ -1,8 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
-
-import { NavBar, Footer, Loading } from "./components";
+import { Layout } from 'antd';
+import 'antd/dist/antd.css'
+import { NavBar, Loading } from "./components";
 import { Home, Profile, ExternalApi } from "./views";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProtectedRoute from "./auth/protected-route";
@@ -11,7 +12,7 @@ import "./app.css";
 
 const App = () => {
 
-
+  const {  Footer } = Layout;
   const { isLoading } = useAuth0();
 
   if (isLoading) {
@@ -28,7 +29,7 @@ const App = () => {
           <ProtectedRoute path="/external-api" component={ExternalApi} />
         </Switch>
       </Container>
-      <Footer />
+      <Footer > HieuTt01 © 2 0 2 1</Footer>
     </div>
   );
 };

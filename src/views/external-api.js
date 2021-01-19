@@ -40,6 +40,15 @@ export const ExternalApi = () => {
           dataIndex: 'age',
       },
       {
+        title: 'Email',
+        dataIndex: 'email',
+        },
+        {
+            title: 'Phone',
+            dataIndex: 'phone',
+            width: 300,
+        },
+      {
           title: 'Address',
           dataIndex: 'address',
       },
@@ -83,12 +92,6 @@ export const ExternalApi = () => {
   return (
 
       <div>
-
-          {/* <Row>
-              <Button type="primary" onClick={openModal}>
-                  Add
-              </Button>
-          </Row> */}
           <Row>
               <Button type="primary" onClick={openModal}>
                   Add
